@@ -35,7 +35,7 @@ var searchEngines = map[string]string{
 }
 
 func (widget *Search) Initialize() error {
-	widget.withTitle("Search").withError(nil)
+	widget.withTitle("Szukaj").withError(nil)
 
 	if widget.SearchEngine == "" {
 		widget.SearchEngine = "duckduckgo"
