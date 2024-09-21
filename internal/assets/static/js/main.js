@@ -481,8 +481,8 @@ function afterContentReady(callback) {
     contentReadyCallbacks.push(callback);
 }
 
-const weekDayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const weekDayNames = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'];
+const monthNames = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'];
 
 function makeSettableTimeElement(element, hourFormat) {
     const fragment = document.createDocumentFragment();
@@ -516,7 +516,7 @@ function timeInZone(now, zone) {
     let timeInZone;
 
     try {
-        timeInZone = new Date(now.toLocaleString('en-US', { timeZone: zone }));
+        timeInZone = new Date(now.toLocaleString('pl-PL', { timeZone: zone }));
     } catch (e) {
         // TODO: indicate to the user that this is an invalid timezone
         console.error(e);

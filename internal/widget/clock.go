@@ -20,7 +20,7 @@ type Clock struct {
 }
 
 func (widget *Clock) Initialize() error {
-	widget.withTitle("Clock").withError(nil)
+	widget.withTitle("Zegar").withError(nil)
 
 	if widget.HourFormat == "" {
 		widget.HourFormat = "24h"

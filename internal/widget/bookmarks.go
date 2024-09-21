@@ -24,7 +24,7 @@ type Bookmarks struct {
 }
 
 func (widget *Bookmarks) Initialize() error {
-	widget.withTitle("Bookmarks").withError(nil)
+	widget.withTitle("Zakładki").withError(nil)
 
 	for g := range widget.Groups {
 		for l := range widget.Groups[g].Links {

@@ -20,7 +20,7 @@ type Repository struct {
 }
 
 func (widget *Repository) Initialize() error {
-	widget.withTitle("Repository").withCacheDuration(1 * time.Hour)
+	widget.withTitle("Repozytoria").withCacheDuration(1 * time.Hour)
 
 	if widget.PullRequestsLimit == 0 || widget.PullRequestsLimit < -1 {
 		widget.PullRequestsLimit = 3
