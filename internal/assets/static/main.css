@@ -1056,7 +1056,7 @@ details[open] .summary::after {
 .bookmarks-icon {
     width: 20px;
     height: 20px;
-    opacity: 0.8;
+    opacity: 1.0;
 }
 
 :root:not(.light-scheme) .simple-icon {
