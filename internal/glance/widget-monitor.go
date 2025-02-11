@@ -35,7 +35,7 @@ type monitorWidget struct {
 }
 
 func (widget *monitorWidget) initialize() error {
-	widget.withTitle("Monitor").withCacheDuration(5 * time.Minute)
+	widget.withTitle("Rapiddc").withCacheDuration(5 * time.Minute)
 
 	return nil
 }
