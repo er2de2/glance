@@ -356,7 +356,7 @@ pages:
 ### Properties
 | Name | Type | Required | Default |
 | ---- | ---- | -------- | ------- |
-| title | string | yes | |
+| name | string | yes | |
 | slug | string | no | |
 | width | string | no | |
 | center-vertically | boolean | no | false |
@@ -374,7 +374,7 @@ The URL friendly version of the title which is used to access the page. For exam
 #### `width`
 The maximum width of the page on desktop. Possible values are `slim` and `wide`.
 
-* default: `1600px`
+* default: `1600px` (when no value is specified)
 * slim: `1100px`
 * wide: `1920px`
 
@@ -1311,7 +1311,7 @@ headers:
 When set to `true`, removes the border and padding around the widget.
 
 ##### `template`
-The template that will be used to display the data. It relies on Go's `html/template` package so it's recommended to go through [its documentation](https://pkg.go.dev/text/template) to understand how to do basic things such as conditionals, loops, etc. In addition, it also uses [tidwall's gjson](https://pkg.go.dev/github.com/tidwall/gjson) package to parse the JSON data so it's worth going through its documentation if you want to use more advanced JSON selectors. You can view additional examples with explanations and function definitions [here](custom-api.md).
+The template that will be used to display the data. It relies on Go's `html/template` package so it's recommended to go through [its documentation](https://pkg.go.dev/text/template) to understand how to do basic things such as conditionals, loops, etc. In addition, it also uses [tidwall's gjson](https://github.com/tidwall/gjson) package to parse the JSON data so it's worth going through its documentation if you want to use more advanced JSON selectors. You can view additional examples with explanations and function definitions [here](custom-api.md).
 
 ### Extension
 Display a widget provided by an external source (3rd party). If you want to learn more about developing extensions, checkout the [extensions documentation](extensions.md) (WIP).
@@ -1608,7 +1608,7 @@ services:
   glance:
     image: glanceapp/glance
     environment:
-      - GITHUB_TOKEN: <your token>
+      - GITHUB_TOKEN=<your token>
 ```
 
 and then use it in your `glance.yml` like this:
