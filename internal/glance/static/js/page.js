@@ -96,7 +96,7 @@ function updateRelativeTimeForElements(elements)
 }
 
 function setupSearchBoxes() {
-    const searchWidgets = document.getElementsByClassName("search");
+    const searchWidgets = document.getElementsByClassName("szukaj");
 
     if (searchWidgets.length == 0) {
         return;
@@ -498,8 +498,8 @@ function afterContentReady(callback) {
     contentReadyCallbacks.push(callback);
 }
 
-const weekDayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const weekDayNames = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'];
+const monthNames = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'];
 
 function makeSettableTimeElement(element, hourFormat) {
     const fragment = document.createDocumentFragment();
